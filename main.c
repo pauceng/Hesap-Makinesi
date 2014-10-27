@@ -2,8 +2,6 @@
 #include "math.h"
 
 int main() {
-	
-	printf(Exponential(4))
 	return 0;
 }
 
