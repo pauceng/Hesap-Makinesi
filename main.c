@@ -2,13 +2,13 @@
 #include "math.h"
 
 int main() {
-	printf(Exponential(4));
+	printf("%f", Exponential(4));
 	return 0;
 }
 
-double Exponential(double x);
+double Exponential(double x)
 {
 	
-return exp(x);	
+return exp(x);
 	
 }
