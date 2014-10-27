@@ -3,7 +3,7 @@
 int main() {
 	return 0;
 }
-public int xUssuY(int a,int b)
+int xUssuY(int a,int b)
 {
 	int sonuc=a;
 	for(int i=1;i<b;i++)
