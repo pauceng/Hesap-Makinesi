@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <conio.h>
+
+
+int cikarma(int sayi1, int sayi2)
+{   int cikar;     
+                      cikar = sayi1 - sayi2; 
+                      printf("Sonuc = %d\n",cikarma);   
+getch();
+return 0;
+} 
