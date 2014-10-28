@@ -1,15 +1,48 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-void main()
+void ekok(int sayilar[]);
+void input();
+
+int main()
 {
-	int sayilar[3];
-	sayilar[0] = 3;
-	sayilar[1] = 6;
-	sayilar[2] = 9;
-	printf("SONUC: %d",ekok(sayilar));
+    input();
+	return 0;
 }
 
-int ekok(int sayilar[])
+void input()
+{
+	int a = 0, *array,*temp,b,i;
+	durak:
+	array = (int*) malloc(2*sizeof(int));
+	printf("Kac sayinin EKOK\'unu almak istiyorsunuz?\n");
+	scanf("%d",&b);
+	temp = (int*) realloc(array,b*sizeof(int));
+	if(temp != NULL)
+	{
+		array = temp;
+	}
+	else
+	{
+		free(array);
+		printf("Hata.\n");
+		goto durak;
+	}
+	for(i=0; i<b; i++)
+	{
+		while(a <= 0)
+		{
+			printf("\n%d. sayiyi girin:\n",i+1);
+			scanf("%d",&a);
+		}
+		array[i] = a;
+		a = 0;
+	}
+	ekok(array);
+	free(array);
+}
+
+void ekok(int sayilar[])
 {
 	int a = sayilar[0], i,b,s = sizeof(sayilar)/sizeof(a);
 	for(i=0; i<s; i++)
@@ -27,7 +60,8 @@ int ekok(int sayilar[])
 			{
 				if(b == s - 1)
 				{
-					return i;
+					printf("Sonuc: %d",i);
+					return;
 				}
 			}
 			else
