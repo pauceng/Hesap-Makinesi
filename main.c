@@ -1,5 +1,13 @@
 #include "stdio.h"
 #include <conio.h>
+void FaktHesap();
+int main() 
+{
+	FaktHesap();
+	_getch();
+	return 0;
+}
+
 void FaktHesap()
 {
 	int i, a, fakt;
@@ -11,10 +19,4 @@ void FaktHesap()
 		fakt = fakt *i;
 		}
 	printf("%d! = %d", a ,fakt);
-}
-	int main() 
-{
-	FaktHesap();
-	_getch();
-	return 0;
 }
