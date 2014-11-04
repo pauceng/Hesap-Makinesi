@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -70,4 +71,27 @@ void ekok(int sayilar[])
 			}
 		}
 	}
+=======
+#include "stdio.h"
+#include <conio.h>
+void FaktHesap();
+int main() 
+{
+	FaktHesap();
+	_getch();
+	return 0;
+}
+
+void FaktHesap()
+{
+	int i, a, fakt;
+	fakt = 1;
+	printf("Faktoriyeli alinacak sayiyi giriniz = ");
+	scanf_s("%d", &a);
+	for (i = 1; i <= a; i++)
+		{
+		fakt = fakt *i;
+		}
+	printf("%d! = %d", a ,fakt);
+>>>>>>> fdb0e41d9b3175fd4170ff3b5c9d334a7a0141ec
 }
