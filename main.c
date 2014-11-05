@@ -1,13 +1,17 @@
-#include<stdio.h>
-#include<conio.h>
+
+#include <stdio.h>
+#include <conio.h>
 
 int topla(int a, int b);
+int xUssuY(int , int );
 int main()
 {
     input();
     int c = topla(sayi1,sayi2);
 	printf("%d",c);
 	EBOB();
+	input();
+	printf("%d uzeri %d ==> %d",a,b,xUssuY(a, b));
 	return 0;
 }
 void input() 
@@ -58,4 +62,14 @@ void EBOB()
 	printf("\nEBOB(%d,%d)=%d",sayi1,sayi2,ebob);
 	printf("\n\nDevam etmek icin herhangi bir tusa basin");
 	getch();
+}
+int xUssuY(int a, int b)
+{
+	int sonuc = a;
+	for (int i = 1; i<b; i++)
+	{
+		sonuc = sonuc*a;
+	}
+
+	return sonuc;
 }
