@@ -17,6 +17,5 @@ void input()
 	scanf("%d", &sayi2);
 }
 int topla(int a, int b) {
-
 return a+b;
 }
