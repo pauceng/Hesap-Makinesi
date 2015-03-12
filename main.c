@@ -1,29 +1,34 @@
-
 #include <stdio.h>
+#include <stdlib.h>
 #include <conio.h>
 
 int topla(int a, int b);
 int xUssuY(int , int );
+
 int main()
 {
-    input();
-    int c = topla(sayi1,sayi2);
-	printf("%d",c);
-	EBOB();
-	input();
-	printf("%d uzeri %d ==> %d",a,b,xUssuY(a, b));
-	return 0;
-}
-void input() 
-{
-	int sayi1=0;
+    int cikis;
+    int sayi1=0;
 	int sayi2=0;
-	printf("ilk sayiyi giriniz: ", sayi1);	
-	scanf("%d", &sayi1);
 
+	do{
+	printf("ilk sayiyi giriniz: ", sayi1);
+	scanf("%d", &sayi1);
 	printf("ikinci sayiyi giriniz: ", sayi2);
 	scanf("%d", &sayi2);
+
+    int c = topla(sayi1,sayi2);
+	printf("Iki sayinin toplami : %d",c);
+	EBOB();
+	printf("%d uzeri %d ==> %d\n\n",sayi1,sayi2,xUssuY(sayi1, sayi2));
+
+	printf("Cikis yapmak için sifir'a(0) basiniz.\n");
+	scanf("%d",&cikis);
+	}while(cikis != 0);
+
+	return 0;
 }
+
 int topla(int a, int b) {
 return a+b;
 }
@@ -33,9 +38,9 @@ void EBOB()
 	int sayi1,sayi2;
 	int kucuk,ebob,i;
 
-	printf("I.Sayi:");
+	printf("\nI.Sayi:");
 	scanf("%d",&sayi1);
-	printf("\nII.Sayi:");
+	printf("II.Sayi:");
 	scanf("%d",&sayi2);
 
 	if(sayi1>sayi2)
@@ -59,14 +64,14 @@ void EBOB()
 			continue;
 		}
 	}
-	printf("\nEBOB(%d,%d)=%d",sayi1,sayi2,ebob);
-	printf("\n\nDevam etmek icin herhangi bir tusa basin");
-	getch();
+	printf("EBOB(%d,%d)=%d\n",sayi1,sayi2,ebob);
 }
+
 int xUssuY(int a, int b)
 {
 	int sonuc = a;
-	for (int i = 1; i<b; i++)
+	int i = 1;
+	for (i; i<b; i++)
 	{
 		sonuc = sonuc*a;
 	}
